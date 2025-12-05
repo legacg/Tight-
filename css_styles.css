@@ -1,0 +1,55 @@
+/* styles.css - Ubuntu Uganda Journeys (Go2Africa-style) */
+:root{
+  --purple:#6c3bff;
+  --dark:#0b0b0f;
+  --muted:#6b6b6b;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, Poppins, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:var(--dark); background:#fff; line-height:1.6;}
+.container{max-width:1250px;margin:0 auto;padding:0 20px;}
+.header{background:linear-gradient(180deg, rgba(8,8,12,0.95), rgba(8,8,12,0.85));position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;}
+.header .brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.header img{height:58px;border-radius:6px}
+.nav{display:flex;gap:18px}
+.nav a{color:#fff;text-decoration:none;font-weight:600;padding:8px 10px;border-radius:6px}
+.nav a:hover{background:rgba(255,255,255,0.05)}
+.hero{height:520px;background-image:url("hero.jpg");background-size:cover;background-position:center;display:flex;align-items:center;color:#fff;padding-top:80px}
+.hero .overlay{background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.6));width:100%;height:100%;padding:60px 0;display:flex;align-items:center}
+.hero .copy{max-width:720px;padding-left:40px}
+.h1{font-size:48px;margin-bottom:12px;letter-spacing:1px}
+.lead{font-size:18px;color:rgba(255,255,255,0.9)}
+.cta{display:inline-block;background:var(--purple);color:#fff;padding:12px 22px;border-radius:28px;margin-top:18px;text-decoration:none;font-weight:700}
+.section{padding:500px 550}
+.section-title{font-size:28px;margin-bottom:18px;color:var(--dark);text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--card);border-radius:10px;box-shadow:0 6px 18px rgba(19,19,24,0.06);overflow:hidden}
+.card img{width:100%;height:200px;object-fit:cover}
+.card-body{padding:18px}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+.btn{display:inline-block;background:var(--purple);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;align-items:start}
+
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.gallery-grid img{width:100%;height:160px;object-fit:cover;border-radius:8px;cursor:pointer;transition:transform .25s}
+.gallery-grid img:hover{transform:scale(1.03)}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.85);z-index:200}
+.lightbox img{max-width:90%;max-height:85%;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.lightbox .close{position:absolute;top:30px;right:30px;background:rgba(255,255,255,0.08);border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;font-weight:700}
+
+/* Booking form */
+.form{background:#fff;padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(19,19,24,0.06)}
+.form label{display:block;margin:8px 0 6px;font-weight:600}
+.form input,.form select,.form textarea{width:100%;padding:10px;border:1px solid #e6e6ee;border-radius:8px}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form .actions{margin-top:12px;display:flex;gap:10px;align-items:center}
+
+/* Footer */
+.footer{background:#0b0b0f;color:#c9c9d3;padding:30px 0;margin-top:30px;text-align:center}
+.small{font-size:13px;color:#9b9ba8}
+
+/* Responsive tweaks */
+@media(max-width:900px){.hero{height:420px}.h1{font-size:32px}.header{padding:10px} .nav{display:none} .hero .copy{padding-left:20px} .form .row{grid-template-columns:1fr}}
